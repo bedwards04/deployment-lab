@@ -3,7 +3,9 @@ const app = express();
 
 const path = require('path');
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname, '/public')));
+app.use("/index", express.static(path.join(__dirname, '/public/index.css')));
+app.use("/Brendan", express.static(path.join(__dirname, '/public/Brendan')))
 
 app.get('/', function(req, res) {
     
