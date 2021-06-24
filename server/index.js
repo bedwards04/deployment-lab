@@ -4,8 +4,8 @@ const app = express();
 const path = require('path');
 
 app.use(express.static(path.join(__dirname, '../public')));
-app.use("/index", express.static(path.join(__dirname, '/public/index.css')));
-app.use("/Brendan", express.static(path.join(__dirname, '/public/Brendan')))
+app.use("/index.css", express.static(path.join(__dirname, '/public/index.css')));
+app.use("/Brendan.jpg", express.static(path.join(__dirname, '/public/Brendan.jpg')))
 
 app.get('/', function(req, res) {
     
